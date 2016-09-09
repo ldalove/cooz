@@ -1,0 +1,134 @@
+{% extends 'ccs/base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Counsel Center Search</title>
+		<link rel="stylesheet" href="{% static 'css/ccs.css' %}">
+	</head>
+
+	<body>
+
+	{% block content %}
+
+
+		<!-- main contents -->
+		<div class="container">
+			<!-- introduction -->
+			<div class="jumbotron">
+				<h1>Counsel Center Search</h1>
+				<p>환영합니다. 전국 상담소 검색 서비스!</p>
+			</div>
+
+			<!-- Introduction -->
+			<div id="introduction-header" class="page-header">
+				<h1>Introduction</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+				</div>
+				<div id="introduction-description" class="col-md-4">
+					<img id="introduction-photo" src="https://hd.unsplash.com/photo-1464305795204-6f5bbfc7fb81" class="img-circle">
+					<h3>Introduction Here</h3>
+					<p><strong>최고의 서비스!</strong></p>
+					<p>Since 2016</p>
+					<p>South Korea</p>
+				</div>
+				<div class="col-md-4">
+				</div>
+			</div>
+
+
+			<!-- Motivation -->
+			<div id="motivation-header" class="page-header">
+				<h1>Motivation</h1>
+			</div>
+			<div class="row">
+				<!-- thumbnail #0 -->
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img src="https://hd.unsplash.com/photo-1427694012323-fb5e8b0c165b" class="img-rounded">
+						<div class="caption">
+							<h3>왜 CCS인가</h3>
+							<p>검증받은 사이트!</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- thumbnail #1 -->
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img src="https://hd.unsplash.com/photo-1415889455891-23bbf19ee5c7" class="img-rounded">
+						<div class="caption">
+							<h3>누가 만들었냐</h3>
+							<p>cooz</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- thumbnail #2 -->
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img src="https://hd.unsplash.com/photo-1463062511209-f7aa591fa72f" class="img-rounded">
+						<div class="caption">
+							<h3>발로 만든 사이트</h3>
+							<p>AWS + apache2 + django 1.10.1 + bootstrap3</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- contact -->
+			<div id="contact-header" class="page-header">
+				<h1>Contact</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-4">
+					<h3>Contact me at:</h3>
+				</div>
+				<div class="col-md-4">
+					<div class="list-group">
+						<a href="#" class="list-group-item" target="_blank">02-000-0000</a>
+						<a href="#" class="list-group-item" target="_blank">donale.kor@gmail.com</a>
+						<a href="#" class="list-group-item" target="_blank">chocolatewr@gmail.com</a>
+					</div>
+				</div>
+				<div class="col-md-2">
+				</div>
+			</div>
+
+
+		</div>
+
+		<div>
+			<h1><a href="">Counsel Center Search</a></h1>
+		</div>
+
+		<div>
+			{{ centers }}
+		</div>
+
+<!--
+		<div class="content container">
+			<div class="row">
+				<div class="col-md-8">
+					{% for univCounselingCenter in univCounselingCenters %}
+						<div class="center">
+							{{ univCounselingCenters }}
+
+							<h1><a href="">{{ univCounselingCenter.title }}</a></h1>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+-->
+	{% endblock content %}
+
+	</body>
+</html>
